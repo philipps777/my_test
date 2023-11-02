@@ -5,21 +5,6 @@ from TEST.helpers.decorators import input_error
 
 
 class BirthdayCommands:
-    # @input_error
-    # def add_birthday(args, book):
-    #     if len(args) != 2:
-    #         raise IndexError("Usage: add-birthday <name> <YYYY-MM-DD>")
-    #     name, date_str = args
-    #     try:
-    #         birthday = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
-    #         if birthday > datetime.date.today():
-    #             raise IncorrectDateFormat("Birthday date cannot be in the future.")
-    #     except ValueError:
-    #         raise IncorrectDateFormat("Invalid date format. Use YYYY-MM-DD.")
-    #
-    #     record = book.find(name)
-    #     record.add_birthday(birthday)
-    #     return f"Birthday for {name} on {date_str} added."
 
     @input_error
     def show_birthday(args, book):

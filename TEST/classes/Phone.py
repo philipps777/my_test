@@ -1,8 +1,7 @@
-from classes.Field import Field
-from helpers.error import PhoneValueError
+from TEST.helpers.error import PhoneValueError
 
 
-class Phone(Field):
+class Phone:
     def __init__(self, value):
         self.__value = None
         self.value = value
@@ -21,3 +20,6 @@ class Phone(Field):
 
     def __eq__(self, other):
         return self.value == other.value
+
+    def __str__(self):
+        return str(self.value)

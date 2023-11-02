@@ -5,14 +5,15 @@ from TEST.classes.Phone import Phone
 from TEST.helpers.error import PhoneValueError, IncorrectEmail
 from TEST.classes.Birthday import Birthday
 
+
 class Record:
     def __init__(self, name):
         self.name = Name(name)
         self.phones = []
-
         self.birthday = None
         self.address = None
         self.emails = []
+        self.email = None
 
     def add_phone(self, phone):
         phone = Phone(phone)
@@ -72,7 +73,7 @@ class Record:
         return str(self.address) if self.address else 'Адрес не задан'
 
     def get_birthday(self):
-        return str(self.birthday) if self.birthday else 'День рождения не задан'
+        return str(self.birthday.value) if self.birthday.value else 'День народження не встановлено'
 
     def __str__(self):
         phones = ', '.join(phone.value for phone in self.phones)

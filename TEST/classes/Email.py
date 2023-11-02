@@ -1,9 +1,5 @@
-from classes.Field import Field
-from helpers.error import IncorrectEmail
-
-
-class Email(Field):
+class Email:
     def __init__(self, value):
-        if '@' not in value or '.' not in value.split('@'-1) or ' ' in value:
-            raise ValueError('Invalid emails address')
-        super.__init__(value)
+        if '@' not in value or '.' not in value.split('@')[1] or ' ' in value:
+            raise ValueError('Invalid email address')
+        self.value = value

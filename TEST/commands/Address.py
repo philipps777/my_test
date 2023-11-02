@@ -3,16 +3,6 @@ from TEST.helpers.decorators import input_error
 
 
 class AddressCommands:
-    # @input_error
-    # def add_address(args, book):
-    #     name, address = args
-    #     record = book.find(name)
-    #     if record:
-    #         record.add_address(address)
-    #         return f"Address {address} added to contact {name}."
-    #     else:
-    #         return "Contact not found."
-
     @input_error
     def show_address(args, book):
         name = args[0]

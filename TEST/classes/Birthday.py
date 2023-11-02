@@ -1,9 +1,7 @@
-from datetime import datetime
-from TEST.classes.Field import Field
+import datetime
 
 
-
-class Birthday(Field):
+class Birthday:
     def __init__(self, value):
         self.__value = None
         self.value = value
@@ -14,11 +12,10 @@ class Birthday(Field):
 
     @value.setter
     def value(self, new_value):
-        try:
-            # Перевіряємо, чи коректна дата
-            datetime.datetime.strptime(new_value, '%Y-%m-%d')
-        except ValueError:
-            raise ValueError("Date should be in YYYY-MM-DD format.")
-
-
+        # try:
+        #     # Перевіряємо, чи коректна дата
+        #     # якщо строка має . то замінити їх на -
+        #     datetime.datetime.strptime(new_value, '%Y-%m-%d')
+        # except ValueError:
+        #     raise ValueError("Date should be in YYYY-MM-DD format.")
         self.__value = new_value
